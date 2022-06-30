@@ -1,0 +1,1 @@
+export 'package:wedding/ui/Decorations/input_decorations.dart';
