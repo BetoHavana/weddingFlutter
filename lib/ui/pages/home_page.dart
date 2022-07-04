@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:wedding/models/constants.dart';
 import 'package:wedding/providers/page_provider.dart';
 import 'package:wedding/ui/widgets/widgets.dart';
 import '../views/views.dart';
@@ -36,8 +37,8 @@ class HomePage extends StatelessWidget {
   BoxDecoration buildBoxDecoration() => BoxDecoration(
     gradient: LinearGradient(
       colors: [
-        Colors.pink,
-        Colors.purpleAccent
+        primaryColor,
+        secondColor
       ],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,

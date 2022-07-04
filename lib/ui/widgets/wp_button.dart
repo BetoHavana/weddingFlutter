@@ -13,7 +13,7 @@ class WPButton extends StatelessWidget {
   Widget build(BuildContext context) {
      double width = MediaQuery. of(context). size. width ;
     return Container(
-      width: width / 2 ,
+     // width: width / 2 ,
       height: 80,
       padding: EdgeInsets.only( bottom: 10, right: 20),
       child: ElevatedButton(

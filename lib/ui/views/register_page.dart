@@ -13,29 +13,41 @@ class RegisterPage extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Container(
         color: secondColor,
-        child: SingleChildScrollView(
-            child: Column(
+        child: Column(
+            children: [
+              SizedBox(height: 30),
+              FittedBox(
+                  child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        '¿Nos Acompañas?',
+                        style: GoogleFonts.dancingScript(
+                            fontSize: 80, fontWeight: FontWeight.bold),
+                      ))),
+              /*Center(
+                  child: Padding(
+                      padding: EdgeInsets.only(left: 20, right: 20),
+                      child: Text(
+                          'Puedes enviarnos un mensaje vía formulario o vía WhatsApp',
+                          style: GoogleFonts.kalam(
+                              fontSize: 20, color: Colors.black)))),
+                             Container(
+            child:  SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: formsWeb(width),
+            ),
+           )*/
+              Column(
           children: [
-            SizedBox(height: 50),
-            FittedBox(
-                child: Padding(
-                    padding: EdgeInsets.only(
-                        top: 50, left: 10, right: 10, bottom: 10),
-                    child: Text(
-                      '¿Nos Acompañas?',
-                      style: GoogleFonts.dancingScript(
-                          fontSize: 80, fontWeight: FontWeight.bold),
-                    ))),
-            Center(
-                child: Padding(
-                  padding: EdgeInsets.only(left: 10,right: 10) ,
-                  child: Text(
-                    'Puedes elegir enviarnos un correo con el formulario o un mensaje por WhatsApp',
-                    style:
-                        GoogleFonts.kalam(fontSize: 20, color: Colors.black)))),
-            width > 530 ? formsWeb(width) : formsMobile(width)
+            WPButton(msg: 'Confirmar con Emmanuel', numero: '524425255902'),
+            WPButton(
+              msg: 'Confirmar con Brenda',
+              numero: '524426210255',
+            )
           ],
-        )));
+        ),
+            ],
+          ));
   }
 
   Widget formsMobile(double width) {
@@ -45,9 +57,9 @@ class RegisterPage extends StatelessWidget {
           width: width / 2,
           child: RegisterForm(),
         ),
-        WPButton(msg: 'Confirmar con Mane', numero: '524425255902'),
+        WPButton(msg: 'Confirmar con Emmanuel', numero: '524425255902'),
         WPButton(
-          msg: 'Confirmar con Mena',
+          msg: 'Confirmar con Brenda',
           numero: '524426210255',
         )
       ],
@@ -67,9 +79,9 @@ class RegisterPage extends StatelessWidget {
         ),
         Column(
           children: [
-            WPButton(msg: 'Confirmar con Mane', numero: '524425255902'),
+            WPButton(msg: 'Confirmar con Emmanuel', numero: '524425255902'),
             WPButton(
-              msg: 'Confirmar con Mena',
+              msg: 'Confirmar con Brenda',
               numero: '524426210255',
             )
           ],

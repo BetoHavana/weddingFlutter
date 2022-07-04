@@ -44,7 +44,7 @@ class _MovilAppMenuState extends State<MovilAppMenu> with SingleTickerProviderSt
         },
         child: Container(
           padding: EdgeInsets.symmetric( horizontal: 10 ),
-          width: 150,
+          width: isOpen ? 150 : 60, //tamano del cuadro negro
           height: isOpen ? 308: 50,
           color: Colors.black,
           child: Column(
@@ -84,17 +84,15 @@ class _MenuTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
+      width: 40, //ancho del icono
       height: 50,
       child: Row(
         children: [
           AnimatedContainer(
             duration: Duration( milliseconds: 200 ),
             curve: Curves.easeInOut,
-            width: isOpen ? 45 : 0,
+            width: isOpen ? 0 : 0,
           ),
-          Text('Menú', style: GoogleFonts.kalam( color: Colors.white, fontSize: 18 )),
-          Spacer(),
           AnimatedIcon(
             icon: AnimatedIcons.menu_close,
             progress: controller, 
