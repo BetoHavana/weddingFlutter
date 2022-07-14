@@ -14,17 +14,16 @@ class RegisterPage extends StatelessWidget {
     return Container(
         color: secondColor,
         child: Column(
-            children: [
-              SizedBox(height: 30),
-              FittedBox(
-                  child: Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Text(
-                        '¿Nos Acompañas?',
-                        style: GoogleFonts.dancingScript(
-                            fontSize: 80, fontWeight: FontWeight.bold),
-                      ))),
-              /*Center(
+          children: [
+            SizedBox(height: 50),
+            FittedBox(
+                child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      '¿Nos Acompañas?',
+                      style: titles,
+                    ))),
+            /*Center(
                   child: Padding(
                       padding: EdgeInsets.only(left: 20, right: 20),
                       child: Text(
@@ -37,17 +36,26 @@ class RegisterPage extends StatelessWidget {
               child: formsWeb(width),
             ),
            )*/
-              Column(
-          children: [
-            WPButton(msg: 'Confirmar con Emmanuel', numero: '524425255902'),
-            WPButton(
-              msg: 'Confirmar con Brenda',
-              numero: '524426210255',
+            SizedBox(
+              height: 30,
+            ),
+            CardContainer(
+              child: Column(
+                children: [
+                  Center(
+                      child: WPButton(
+                          msg: 'Confirmar con Emmanuel',
+                          numero: '524425255902')),
+                  Center(
+                      child: WPButton(
+                    msg: 'Confirmar con Brenda    ',
+                    numero: '524426210255',
+                  ))
+                ],
+              ),
             )
           ],
-        ),
-            ],
-          ));
+        ));
   }
 
   Widget formsMobile(double width) {

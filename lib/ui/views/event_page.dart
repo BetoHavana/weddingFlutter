@@ -13,36 +13,44 @@ class EventPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(
+                height: 20,
+              ),
               Text(
-                    'Nos casamos',
-                    style: GoogleFonts.dancingScript(fontSize: 44, fontWeight: FontWeight.bold),
+                    '¡Nos casamos!',
+                    style: subitles,
                   ),
+               FittedBox(
+                fit: BoxFit.contain,
+                child: 
+               
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Column(children: [
                     Container(
-                      height: 100,
-                      width: 100,
+                      height: 200,
+                      width: 200,
                       margin: EdgeInsets.only(top: 20),
-                      child: Image(image: AssetImage('assets/user.png')),
+                      child: CircleAvatar(backgroundImage: AssetImage('assets/mane.jpeg'),),
                     ),
-                    Text('Emmanuel')
+                    Text('Emmanuel', style: commonTextStyle,)
                   ]),
                   SizedBox(width: 50),
                   Column(children: [
                     Container(
-                      height: 100,
-                      width: 100,
+                      height: 200,
+                      width: 200,
                       margin: EdgeInsets.only(top: 20),
-                      child: Image(image: AssetImage('assets/user.png')),
+                      child: CircleAvatar(backgroundImage: AssetImage('assets/mena.jpeg'),),
                     ),
-                    Text('Brenda')
+                    Text('Brenda', style: commonTextStyle,)
                   ]),
                 ],
               ),
-              SizedBox(height: 50),
+               ),
+              SizedBox(height: 20),
               
               FittedBox(
                 fit: BoxFit.contain,
@@ -50,10 +58,10 @@ class EventPage extends StatelessWidget {
                     padding: EdgeInsets.all(15), 
                     child: Text(
                       '19 de noviembre de 2022 - Peñamiller, Qro.',
-                      style: GoogleFonts.kalam(fontSize: 24, fontWeight: FontWeight.bold),
+                      style: dateText,
                     ),
               )),
-              SizedBox(height: 50),
+              SizedBox(height: 20),
               Container(
                 height: 150,
                 width: MediaQuery. of(context). size. width,

@@ -16,10 +16,7 @@ class HomeStartPage extends StatelessWidget {
           child:  Padding(padding: EdgeInsets.all(10),
           child: Text(
               'Emmanuel & Brenda',
-              style: GoogleFonts.dancingScript(
-                fontSize: 80,
-                fontWeight: FontWeight.bold
-              ),
+              style: titles,
             ),
           )
         ),

@@ -14,18 +14,18 @@ class _CountdownAppState extends State<CountdownApp> {
   @override
   Widget build(BuildContext context) {
     return FittedBox(
+      fit: BoxFit.contain,
       child: Center(
         child: CountDownText(
           due: DateTime.parse("2022-11-19 00:00:00"),
-          finishedText: "Es hoy.!",
+          finishedText: "Es hoy!",
           showLabel: true,
           longDateName: true,
           daysTextLong: "  Días  ",
           hoursTextLong: "  Horas  ",
           minutesTextLong: "  Minutos  ",
           secondsTextLong: "  Segundos  ",
-          style:
-              GoogleFonts.dancingScript(fontSize: 20, fontWeight: FontWeight.normal)),
+          style: timerText),
       ),
     );
     //kalam,caveat,fresca,amaranth

@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wedding/models/constants.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
+import '../widgets/widgets.dart';
+
 class GalleyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,20 +20,19 @@ class MyGallery extends StatelessWidget {
         children: [
           FittedBox(
                   child: Padding(
-                    padding: EdgeInsets.all(50),
+                    padding: EdgeInsets.only(top:50,left: 50,right: 50),
                     child: Text(
                       'Galeria',
-                      style: GoogleFonts.dancingScript(
-                          fontSize: 80, fontWeight: FontWeight.bold),
+                      style: titles,
                     ),
                   )
                 ),
           Container(
-            height: 400,
+            height: 500,
             width: MediaQuery.of(context).size.width,
             child: Padding(
               padding: EdgeInsets.only(left :50.0,right: 50.0),
-              child: StaggeredGridView.countBuilder(
+              child: GalleryWidget() /*StaggeredGridView.countBuilder(
               scrollDirection: Axis.horizontal,
               crossAxisCount: 4,
               itemCount: 15,
@@ -51,7 +52,7 @@ class MyGallery extends StatelessWidget {
                   new StaggeredTile.count(2, index.isEven ? 3 : 2),
               mainAxisSpacing: 4.0,
               crossAxisSpacing: 4.0,
-            ),
+            ),*/
             )
           )
         ]

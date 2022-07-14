@@ -30,7 +30,7 @@ class WPButton extends StatelessWidget {
             SizedBox(
               width: 10,
             ),
-            Text(msg!, style: TextStyle(fontSize: 20,color: Colors.black)),
+            Text(msg!, style: commonTextStyle),
           ],
         ),
       ),

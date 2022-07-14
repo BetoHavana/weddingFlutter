@@ -44,8 +44,7 @@ class _CustomMenuItemState extends State<CustomMenuItem> {
                   Padding(
                       padding: EdgeInsets.only(bottom: 15),
                       child: Text(widget.text,
-                          style: GoogleFonts.kalam(
-                              fontSize: 20, color: Colors.black))),
+                          style:commonTextStyle)),
                   isHover
                       ? Container(height: 5, width: 80, color: primaryColor)
                       : Container(),
